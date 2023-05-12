@@ -35,8 +35,8 @@ CFG_ENABLE_EMBEDDED_TESTS ?= y
 ifeq ($(PLATFORM_FLAVOR),sigi)
 CFG_TEE_CORE_NB_CORE = 4
 # [0e00.0000 0e0f.ffff] is reserved to early boot
-CFG_TZDRAM_START ?= 0x05080000
-#CFG_TZDRAM_START ?= 0x1002000000
+#CFG_TZDRAM_START ?= 0x05080000
+CFG_TZDRAM_START ?= 0x1002000000
 CFG_TZDRAM_SIZE  ?= 0x01000000
 # SHM chosen arbitrary, in a way that it does not interfere
 # with initial location of linux kernel, dtb and initrd.

@@ -4,26 +4,14 @@
  * Copyright (c) 2014, STMicroelectronics International N.V.
  */
 
-#include <arm.h>
 #include <console.h>
 #include <drivers/gic.h>
 #include <drivers/ns16550.h>
-#include <initcall.h>
-#include <keep.h>
 #include <kernel/boot.h>
-#include <kernel/interrupt.h>
-#include <kernel/misc.h>
-#include <kernel/notif.h>
 #include <kernel/panic.h>
-#include <kernel/spinlock.h>
-#include <kernel/tee_time.h>
 #include <mm/core_memprot.h>
-#include <mm/core_mmu.h>
 #include <platform_config.h>
-#include <sm/psci.h>
 #include <stdint.h>
-#include <string.h>
-#include <trace.h>
 
 static struct gic_data gic_data __nex_bss;
 static struct ns16550_data console_data __nex_bss;
