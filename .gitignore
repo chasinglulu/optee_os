@@ -6,3 +6,4 @@ TAGS
 out
 .project
 *.swp
+.cache
