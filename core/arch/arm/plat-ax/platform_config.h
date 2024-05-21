@@ -25,6 +25,20 @@
 
 #define GICD_OFFSET         0
 #define GICC_OFFSET         0x1000
+#elif defined(PLATFORM_FLAVOR_lua)
+#define GIC_BASE        0x08001000
+#define UART0_BASE      0x0E403000
+#define UART1_BASE      0x0E404000
+
+#define CONSOLE_UART_BASE   UART0_BASE
+#define CONSOLE_UART_SIZE   ULL(0x1000)
+
+#define SZ_1G               0x40000000
+#define DRAM_BASE           0x100000000UL
+#define DRAM_SIZE           (ULL(8) * SZ_1G)
+
+#define GICD_OFFSET         0
+#define GICC_OFFSET         0x1000
 #else
 #error "Unknown platform flavor"
 #endif
